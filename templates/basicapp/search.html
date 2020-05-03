@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block body_block %}
+<style type="text/css">
+  .input-group.md-form.form-sm.form-1 input{
+    border: 1px solid #bdbdbd;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+  .input-group.md-form.form-sm.form-2 input {
+    border: 1px solid #bdbdbd;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+  .input-group.md-form.form-sm.form-2 input.red-border {
+    border: 1px solid #ef9a9a;
+  }
+  .input-group.md-form.form-sm.form-2 input.lime-border {
+    border: 1px solid #cddc39;
+  }
+  .input-group.md-form.form-sm.form-2 input.amber-border {
+    border: 1px solid #ffca28;
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<br/>
+<br/>
+<h2>Search for City</h2>
+<br/>
+<br/>
+<div class="container">
+    <hr>
+    <form method="post" action="{% url 'songSerch' user  password %}"  enctype="multipart/form-data" class="form-inline md-form mr-auto mb-4">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit" id="text">Search</button>
+    </form>
+    <hr>
+    <br/>
+    <br/>
+    <h2>Top result</h2>
+    <br/>
+    <br/>
+    {% for dataRes in dataRes_ %}
+        <div class="card mb-3" style="max-width: 800px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="{% static "images/tienda_3.jpg" %}" class="card-img" alt="Uh Oh, didn't show!">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{dataRes}}</h5>
+                <br/>
+                <br/>
+                <div class="container">
+                  <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+                  <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+                  <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+                  <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+                  <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+       <br/>
+    {% endfor %}
+</div>
+{% endblock %}

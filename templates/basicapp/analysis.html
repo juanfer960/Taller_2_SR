@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block body_block %}
+
+
+<br/>
+<br/>
+<h2>Results</h2>
+<br/>
+<br/>
+<div class="container">
+  <hr>
+    <div class="row">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-dark">Business</li>
+        {% for dataRes in dataRes_artistName %}
+        <li class="list-group-item">{{dataRes}}</li>
+        {% endfor %}
+      </ul>
+      <hr>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-dark">City</li>
+        {% for dataRes in dataRes_city %}
+        <li class="list-group-item">{{dataRes}}</li>
+        {% endfor %}
+      </ul>
+      <hr>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-dark">Address</li>
+        {% for dataRes in dataRes_artistId %}
+        <li class="list-group-item">{{dataRes}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  <hr>
+</div>
+{% endblock %}

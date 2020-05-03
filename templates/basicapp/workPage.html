@@ -1,0 +1,167 @@
+
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block body_block %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br/>
+<br/>
+<h2>Recommended for today</h2>
+<h6>Inspired by your recent activity.(Model CB)</h6>
+<br/>
+<div class="container">
+  <hr>
+    <div class="row">
+    {% for dataRes in dataRes_uno %}
+      <div class="card" style="max-width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{dataRes}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Recommended for today</h6>
+          <p class="card-text">
+              <img src="{% static "images/tienda_1.jpg" %}" class="card-img" alt="Uh Oh, didn't show!">
+          </p>
+          <div class="container">
+            <a  href="#" class="card-link" ><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a  href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a  href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a  href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a  href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+
+          </div>
+        </div>
+      </div>
+      <hr>
+    {% endfor %}
+    </div>
+
+    <hr>
+
+  <div class="row">
+      {% for dataRes in dataRes_dos %}
+      <div class="card" style="max-width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{dataRes}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Recommended for today</h6>
+          <p class="card-text">
+              <img src="{% static "images/tienda_2.jpg" %}" class="card-img" alt="Uh Oh, didn't show!">
+          </p>
+          <div class="container">
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a shref="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {% endfor %}
+  </div>
+
+  <hr>
+
+  <div class="row">
+      {% for dataRes in dataRes_tres %}
+      <div class="card" style="max-width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{dataRes}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Recommended for today</h6>
+          <p class="card-text">
+              <img src="{% static "images/tienda_3.jpg" %}" class="card-img" alt="Uh Oh, didn't show!">
+          </p>
+          <div class="container">
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {% endfor %}
+  </div>
+
+  <div class="container"></div>
+  <br/>
+  <br/>
+  
+  <h6>Inspired by your recent activity.(Model Fac)</h6>
+  <hr>
+
+  <div class="row">
+      {% for dataRes in dataRes_cuatro %}
+      <div class="card" style="max-width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{dataRes}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Recommended for today</h6>
+          <p class="card-text">
+              <img src="{% static "images/tienda_4.jpeg" %}" class="card-img" alt="Uh Oh, didn't show!">
+          </p>
+          <div class="container">
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {% endfor %}
+  </div>
+
+  <hr>
+
+  <div class="row">
+      {% for dataRes in dataRes_cinco %}
+      <div class="card" style="max-width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{dataRes}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Recommended for today</h6>
+          <p class="card-text">
+              <img src="{% static "images/tienda_5.jpeg" %}" class="card-img" alt="Uh Oh, didn't show!">
+          </p>
+          <div class="container">
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {% endfor %}
+  </div>
+
+  <hr>
+
+  <div class="row">
+      {% for dataRes in dataRes_seis %}
+      <div class="card" style="max-width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{dataRes}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Recommended for today</h6>
+          <p class="card-text">
+              <img src="{% static "images/tienda_6.jpeg" %}" class="card-img" alt="Uh Oh, didn't show!">
+          </p>
+          <div class="container">
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+            <a href="#" class="card-link"><span style="color:red;" class="fa fa-star checked"></span></a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {% endfor %}
+  </div>
+
+  </div>
+
+  <hr>
+</div>
+
+{% endblock %}

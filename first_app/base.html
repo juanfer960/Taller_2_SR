@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    {% load static %}
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+
+    <title>Base</title>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+
+            <div class="navbar-nav ">
+              {% if password == null %}
+                  <li><a class="navbar-brand" href="{% url 'login' %}">Log In</a></li>
+                  <li><a class="navbar-brand" href="{% url 'logup' %}">Sing Up</a></li>
+              {% else %}
+                  <li><a class="navbar-brand" href="{% url 'singout' %}">Log Out</a></li>
+                  <li><a class="nav-item nav-link" href="{% url 'home' user%}">Home</a></li>
+                  <li><a class="nav-item nav-link" href="{% url 'search' user%}">Search</a></li>
+              {% endif %}
+            </div>
+            <div class="navbar-nav ml-auto">
+              {% if password != null %}
+                  <li><a class="nav-item nav-link" href="#">Welcome {{user}}</a></li>
+              {% endif %}
+              <a class="nav-item nav-link" href="#"></a>
+            </div>
+
+    </nav>
+
+
+
+
+    <div class="container">
+      {% block body_block %}
+
+      {% endblock %}
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<style type="text/css">
+.box{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 640px;
+  height: 120px;
+  margin-left: -320px;
+  margin-top: -60px;
+  font-size: 24px;
+  color: gray;
+}
+</style>
+    <div class="box">
+
+      <div class="alert alert-danger" role="alert">
+          <h2>Username does not exist!</h2>
+      </div>
+
+    </div>
+
+{% endblock %}
